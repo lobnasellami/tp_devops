@@ -3,7 +3,7 @@ pipeline{
     stages{
         stage("getting code") {
             steps {
-                git url: 'https://github.com/amira123bd/DevopsTP.git', branch: 'master',
+                git url: 'https://github.com/lobnasellami/tp_devops.git', branch: 'main',
                 credentialsId: 'github-credentials' //jenkins-github-creds
                 sh "ls -ltr"
             }
@@ -29,8 +29,8 @@ pipeline{
                         sh "pwd"
                         sh "ls"
                         echo "push to hub"
-                        sh "docker tag devopstp amirabd1245/devopstp:devopstp"
-                        sh "docker push amirabd1245/devopstp:devopstp"
+                        sh "docker tag devopstp lobnasellami/devopstp:devopstp"
+                        sh "docker push lobnasellami/devopstp:devopstp"
          
                            }        
                         }

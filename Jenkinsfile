@@ -33,6 +33,7 @@ pipeline{
                         sh "pwd"
                         sh "ls"
                         echo "push to hub"
+                        sh "docker login -u lobnasellami -p Ahmedbaya3. "
                         sh "docker tag devopstp lobnasellami/devopstp:devopstp"
                         sh "docker push lobnasellami/devopstp:devopstp"
          

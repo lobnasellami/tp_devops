@@ -14,7 +14,7 @@ pipeline{
         }
 
        //build de l'image
-         stage("creation de image"){
+         stage("image creation"){
             steps {                
                 script {
                     echo "======== executing ========"
@@ -39,7 +39,7 @@ pipeline{
                         }
                     }              
                 
-        stage("Build container for the image ") {
+        stage("build container for the image ") {
             steps {                
                 script {
                     echo "Running the Docker container"

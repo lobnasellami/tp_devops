@@ -35,7 +35,7 @@ pipeline{
                         echo "push to hub"
                         sh "docker tag devopstp lobnasellami/devopstp:devopstp"
                         sh "docker push lobnasellami/devopstp:devopstp"
-         
+                        sh "docker run -d -p 9090:8080 lobnasellami/devopstp:devopstp"
                            }        
                         }
                     }              

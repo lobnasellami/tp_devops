@@ -39,7 +39,7 @@ pipeline{
                            }        
                         }
                     }              
-                }
+                
         stage("Build container for the image ") {
             steps {                
                 script {

@@ -40,6 +40,16 @@ pipeline{
                         }
                     }              
                 }
+        stage("Build container for the image ") {
+            steps {                
+                script {
+                    echo "Running the Docker container"
+                        sh "docker run -d -p 9090:8080 lobnasellami/devopstp:devopstp"
+                           }        
+                        }
+                    }              
+                }
+        
             post{
                 success{
                     echo "======== Setting up infra executed successfully ========"
